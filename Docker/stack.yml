@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  openjdk:
+    image: 127.0.0.1:5000/docker_swagger
+    build: .
+    restart: always
+    ports:
+      - 80:80
+      
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: personadb
