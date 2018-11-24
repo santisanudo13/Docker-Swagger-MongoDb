@@ -55,6 +55,11 @@ public class Persona {
 	}
 	
 	
-
+	@Override
+    public String toString() {
+        return String.format(
+                "Persona[dni=%s, nombre='%s', apellido1='%s', apellido2='%s']",
+                dni, nombre, apellido1, apellido2);
+    }
 	
 }
